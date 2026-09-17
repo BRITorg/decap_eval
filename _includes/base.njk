@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | Ferns of Texas (Decap/Eleventy test)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    nav { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 1rem 0; margin: 1.5rem 0; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+    .meta { color: #666; font-size: 0.85rem; }
+    .field { margin: 0.25rem 0; }
+    .field b { display: inline-block; min-width: 7rem; }
+  </style>
+</head>
+<body>
+  <p class="meta">Eleventy-built test site for the Decap CMS migration pipeline (not the real ferns.brit.org content). Edit any page through <a href="{{ '/admin/' | url }}">/admin/</a>.</p>
+
+  {% include "nav.njk" %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <script>
+    (async function checkLegacyRedirect() {
+      // Simulates the Cloudflare Redirect Rules planned for production:
+      // old Drupal ?q=node/NID links -> the new slug-based URL.
+      const match = window.location.search.match(/[?&]q=node\/(\d+)/);
+      if (!match) return;
+      try {
+        const res = await fetch("{{ '/data/redirects.json' | url }}");
+        const map = await res.json();
+        const slug = map[match[1]];
+        if (slug) window.location.replace("{{ '/' | url }}" + slug + "/");
+      } catch (err) {
+        console.error('Redirect lookup failed', err);
+      }
+    })();
+  </script>
+</body>
+</html>

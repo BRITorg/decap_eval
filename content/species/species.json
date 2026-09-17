@@ -1,0 +1,4 @@
+{
+  "layout": "species.njk",
+  "permalink": "/{{ page.fileSlug }}/"
+}
