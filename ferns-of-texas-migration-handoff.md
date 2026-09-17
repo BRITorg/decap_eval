@@ -90,7 +90,7 @@ Plan is two-phase: a dev subdomain first, then cut over the real `ferns.brit.org
 - Repoint `ferns.brit.org`'s actual DNS from the on-prem server to the same Cloudflare/GitHub Pages setup validated in Phase 1.
 - This is the point where the real Cloudflare Redirect Rules (old `?q=node/NID` links → new slugs) need to exist for real, built from the actual node/url_alias data — not just the small client-side test map used during Decap pipeline testing.
 
-**Open:** who currently manages DNS for `brit.org` (registrar/provider) — needed before Cloudflare setup can start.
+**DNS provider:** `brit.org` DNS is managed by Network Solutions (confirmed 2026-09-17). Cloudflare partial/CNAME setup will need a login there to add records.
 
 ## Open Questions / Not Yet Decided
 
