@@ -72,6 +72,26 @@ Goal: validate the whole editing pipeline works end-to-end before touching real 
 
 Steps 1, 4, and 5 require the owner's own GitHub account/actions (repo creation, enabling Pages, registering the OAuth App) — Claude Code can walk through them but can't perform the account-level clicks itself. Steps 2, 3, 6 are direct file/config work Claude Code can do outright once the repo exists and is authenticated locally.
 
+## Custom Domain Setup (GitHub Pages + Cloudflare)
+
+Plan is two-phase: a dev subdomain first, then cut over the real `ferns.brit.org` once the rebuilt site is verified.
+
+**Naming:** DNS labels can't contain underscores — `ferns_new.brit.org` isn't valid. Use a hyphen, e.g. `ferns-new.brit.org` or `ferns-dev.brit.org`.
+
+**Phase 1 — dev subdomain:**
+1. GitHub side: repo Settings → Pages → add the custom domain (e.g. `ferns-dev.brit.org`). GitHub requires a one-time domain-ownership verification via a TXT record, separate from the CNAME (may already be satisfied at the BRITorg org level if other org repos already use `*.brit.org` custom domains on Pages).
+2. DNS side: add a CNAME record for the chosen dev subdomain → `britorg.github.io`.
+3. Cloudflare: as of 2026-09-17, `ferns.brit.org`'s current public IP doesn't look Cloudflare-proxied, so this is a fresh setup. Two ways to bring a subdomain under Cloudflare:
+   - **Full setup** — move all of `brit.org`'s DNS to Cloudflare's nameservers. Large blast radius (affects mail and every other subdomain); needs coordination with whoever manages BRIT's DNS today.
+   - **Partial/CNAME setup** — Cloudflare's lighter option that brings just one subdomain under its proxy/redirect-rules features without touching the rest of the domain. Almost certainly the right fit here.
+4. Repo-side change (not yet done): Eleventy's `pathPrefix` is currently `/decap_eval/`, matching the `britorg.github.io/decap_eval/` project-page URL. Once a custom domain is live the site serves from the domain root, so `pathPrefix` needs to become `/` — should change at the same time as the domain cutover, not before, or it'll break the current preview URL.
+
+**Phase 2 — cutover to the real `ferns.brit.org`:**
+- Repoint `ferns.brit.org`'s actual DNS from the on-prem server to the same Cloudflare/GitHub Pages setup validated in Phase 1.
+- This is the point where the real Cloudflare Redirect Rules (old `?q=node/NID` links → new slugs) need to exist for real, built from the actual node/url_alias data — not just the small client-side test map used during Decap pipeline testing.
+
+**Open:** who currently manages DNS for `brit.org` (registrar/provider) — needed before Cloudflare setup can start.
+
 ## Open Questions / Not Yet Decided
 
 - Eleventy vs. Jekyll — no final call made; depends on how the actual content model looks once DB access is available.
