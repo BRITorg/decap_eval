@@ -16,3 +16,14 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
+
+  - name: species
+    label: Species
+    folder: content/species
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Scientific name, name: title, widget: string }
+      - { label: Family, name: family, widget: string }
+      - { label: Common names, name: common_names, widget: string, required: false }
+      - { label: Body, name: body, widget: markdown }

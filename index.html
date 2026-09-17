@@ -66,7 +66,30 @@
       }
     }
 
-    loadPages();
+    async function checkLegacyRedirect() {
+      // Simulates the Cloudflare Redirect Rules that will handle old Drupal
+      // ?q=node/NID links in production. This client-side version is just
+      // for testing the id -> slug mapping before that's set up for real.
+      const match = window.location.search.match(/[?&]q=node\/(\d+)/);
+      if (!match) return false;
+      try {
+        const res = await fetch('data/redirects.json');
+        const map = await res.json();
+        const slug = map[match[1]];
+        if (slug) {
+          window.location.replace(`${slug}/`);
+          return true;
+        }
+      } catch (err) {
+        console.error('Redirect lookup failed', err);
+      }
+      return false;
+    }
+
+    (async () => {
+      const redirected = await checkLegacyRedirect();
+      if (!redirected) loadPages();
+    })();
   </script>
 </body>
 </html>
