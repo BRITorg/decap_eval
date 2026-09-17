@@ -1,0 +1,79 @@
+/* FWBG colour system.
+   Base values are the brand palette from the June 2025 guidelines; the HSL triplets and the
+   -h/-s/-l components mirror the production theme so hsla(var(--x-h),var(--x-s),var(--x-l),a)
+   transparency recipes work exactly as they do on fwbg.org. */
+:root{
+  /* --- Brand palette (guidelines, primary) --- */
+  --fwbg-evergreen:#293A2E;   /* PANTONE 5605 */
+  --fwbg-meadow:#8EA937;      /* PANTONE 2276 */
+  --fwbg-sunstone:#F68A3D;    /* PANTONE 2025 */
+  --fwbg-limestone:#F2EDE7;   /* PANTONE 2323 @ 20% */
+  --fwbg-mist:#D1DED6;        /* PANTONE 621  — summer */
+  --fwbg-red-oak:#380808;     /* PANTONE 4975 — autumn */
+  --fwbg-honey:#F2C40F;       /* PANTONE 7406 — autumn */
+  --fwbg-koi:#FFCFAB;         /* PANTONE 2015 — autumn */
+  --fwbg-solstice:#2B1F4A;    /* PANTONE 2695 — winter */
+  --fwbg-frost:#ABE8FA;       /* PANTONE 317  — winter */
+  --fwbg-lilac:#D1D6F7;       /* PANTONE 2706 — winter */
+  --fwbg-riverleaf:#004A4A;   /* PANTONE 3302 — spring */
+  --fwbg-petal-pink:#E5ABD4;  /* PANTONE 515  — spring */
+  --fwbg-citrus:#FAD68A;      /* PANTONE 2005 — spring */
+
+  /* --- Semantic ramp. Default = institutional / summer (Evergreen) --- */
+  --color-primary-darker:hsl(135,15%,5%);   --color-primary-darker-h:135;--color-primary-darker-s:15%;--color-primary-darker-l:5%;
+  --color-primary-dark:hsl(128,12%,13%);    --color-primary-dark-h:128;--color-primary-dark-s:12%;--color-primary-dark-l:13%;
+  --color-primary:hsl(138,17%,19%);         --color-primary-h:138;--color-primary-s:17%;--color-primary-l:19%;
+  --color-primary-light:hsl(136,17%,25%);   --color-primary-light-h:136;--color-primary-light-s:17%;--color-primary-light-l:25%;
+  --color-primary-lighter:hsl(131,13%,34%); --color-primary-lighter-h:131;--color-primary-lighter-s:13%;--color-primary-lighter-l:34%;
+
+  --color-accent-darker:hsl(22,68%,46%);    --color-accent-darker-h:22;--color-accent-darker-s:68%;--color-accent-darker-l:46%;
+  --color-accent-dark:hsl(22,77%,54%);      --color-accent-dark-h:22;--color-accent-dark-s:77%;--color-accent-dark-l:54%;
+  --color-accent:hsl(25,91%,60%);           --color-accent-h:25;--color-accent-s:91%;--color-accent-l:60%;
+  --color-accent-light:hsl(25,91%,66%);     --color-accent-light-h:25;--color-accent-light-s:91%;--color-accent-light-l:66%;
+  --color-accent-lighter:hsl(25,91%,72%);   --color-accent-lighter-h:25;--color-accent-lighter-s:91%;--color-accent-lighter-l:72%;
+
+  --color-secondary-darker:hsl(74,47%,31%); --color-secondary-darker-h:74;--color-secondary-darker-s:47%;--color-secondary-darker-l:31%;
+  --color-secondary-dark:hsl(74,47%,37%);   --color-secondary-dark-h:74;--color-secondary-dark-s:47%;--color-secondary-dark-l:37%;
+  --color-secondary:hsl(74,47%,43%);        --color-secondary-h:74;--color-secondary-s:47%;--color-secondary-l:43%;
+  --color-secondary-light:hsl(74,47%,55%);  --color-secondary-light-h:74;--color-secondary-light-s:47%;--color-secondary-light-l:55%;
+  --color-secondary-lighter:hsl(74,47%,72%);--color-secondary-lighter-h:74;--color-secondary-lighter-s:47%;--color-secondary-lighter-l:72%;
+
+  --color-tertiary:hsl(138,17%,85%);        --color-tertiary-h:138;--color-tertiary-s:17%;--color-tertiary-l:85%;
+  --color-member:hsl(20,91%,79%);           --color-member-h:20;--color-member-s:91%;--color-member-l:79%;
+
+  /* Surfaces — Limestone family */
+  --color-bg-darker:hsl(39,20%,77%); --color-bg-darker-h:39;--color-bg-darker-s:20%;--color-bg-darker-l:77%;
+  --color-bg-dark:hsl(35,23%,86%);   --color-bg-dark-h:35;--color-bg-dark-s:23%;--color-bg-dark-l:86%;
+  --color-bg:hsl(33,31%,93%);        --color-bg-h:33;--color-bg-s:31%;--color-bg-l:93%;
+  --color-bg-light:hsl(40,23%,95%);  --color-bg-light-h:40;--color-bg-light-s:23%;--color-bg-light-l:95%;
+  --color-bg-lighter:hsl(40,20%,97%);--color-bg-lighter-h:40;--color-bg-lighter-s:20%;--color-bg-lighter-l:97%;
+
+  /* Text / border ramp */
+  --color-contrast-lower:hsl(53,8%,80%);   --color-contrast-lower-h:53;--color-contrast-lower-s:8%;--color-contrast-lower-l:80%;
+  --color-contrast-low:hsl(87,5%,65%);     --color-contrast-low-h:87;--color-contrast-low-s:5%;--color-contrast-low-l:65%;
+  --color-contrast-medium:hsl(108,4%,51%); --color-contrast-medium-h:108;--color-contrast-medium-s:4%;--color-contrast-medium-l:51%;
+  --color-contrast-high:hsl(133,9%,31%);   --color-contrast-high-h:133;--color-contrast-high-s:9%;--color-contrast-high-l:31%;
+  --color-contrast-higher:hsl(138,18%,19%);--color-contrast-higher-h:138;--color-contrast-higher-s:18%;--color-contrast-higher-l:19%;
+
+  --color-black:hsl(230,13%,9%); --color-black-h:230;--color-black-s:13%;--color-black-l:9%;
+  --color-white:hsl(0,0%,100%);  --color-white-h:0;--color-white-s:0%;--color-white-l:100%;
+
+  /* Feedback */
+  --color-success:hsl(170,78%,36%); --color-success-h:170;--color-success-s:78%;--color-success-l:36%;
+  --color-warning:hsl(35,79%,66%);  --color-warning-h:35;--color-warning-s:79%;--color-warning-l:66%;
+  --color-error:hsl(342,89%,48%);   --color-error-h:342;--color-error-s:89%;--color-error-l:48%;
+
+  /* Aliases */
+  --text-body:var(--color-contrast-high);
+  --text-heading:var(--color-contrast-higher);
+  --text-muted:var(--color-contrast-medium);
+  --text-inverse:var(--color-bg-lighter);
+  --surface-page:var(--color-bg);
+  --surface-card:var(--color-bg-lighter);
+  --surface-sunken:var(--color-bg-dark);
+  --surface-inverse:var(--color-primary);
+  --border-subtle:var(--color-bg-dark);
+  --border-strong:var(--color-bg-darker);
+  --link-color:var(--color-primary);
+  --link-color-hover:var(--color-accent-darker);
+}

@@ -1,0 +1,20 @@
+---
+title: Species Index
+layout: base.njk
+permalink: /species/
+raw: true
+---
+{% import "macros.njk" as m %}
+<section style="background:var(--surface-page);">
+  <div style="max-width:var(--max-width-xxl);margin:0 auto;padding:var(--space-xl) var(--component-padding);">
+    {{ m.sectionHeading("Browse", "Species Index", "Sample entries shown below — the full alphabetical index from the book will replace this list as content is migrated.") }}
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-sm);margin-top:var(--space-md);">
+      {% for species in collections.species %}
+      <a href="{{ species.url }}" class="tile">
+        <div style="font-family:var(--font-primary);font-style:italic;font-weight:700;font-size:var(--text-md);color:var(--text-heading);">{{ species.data.title }}</div>
+        <div style="font-family:var(--font-primary);font-size:var(--text-sm);color:var(--text-muted);margin-top:var(--space-xxxs);">{{ species.data.common_names.split(",")[0].trim() }}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

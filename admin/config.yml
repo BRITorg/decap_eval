@@ -15,7 +15,13 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
+      - { label: Eyebrow, name: eyebrow, widget: string, required: false, hint: "Small label above the title, e.g. \"Reference\"" }
+      - { label: Standfirst, name: standfirst, widget: text, required: false, hint: "Optional intro line shown below the title" }
+      - { label: Body, name: body, widget: markdown, required: false }
+      - { label: Button label, name: cta_label, widget: string, required: false }
+      - { label: Button URL, name: cta_url, widget: string, required: false }
+      - { label: "Buy the Book: book title", name: book_title, widget: string, required: false }
+      - { label: "Buy the Book: byline", name: byline, widget: string, required: false }
 
   - name: species
     label: Species
@@ -24,6 +30,39 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: Scientific name, name: title, widget: string }
+      - { label: Author citation, name: author_citation, widget: string, required: false, hint: "e.g. \"(Buckley) Kunze\"" }
       - { label: Family, name: family, widget: string }
-      - { label: Common names, name: common_names, widget: string, required: false }
-      - { label: Body, name: body, widget: markdown }
+      - { label: Common names, name: common_names, widget: string, required: false, hint: "Comma-separated" }
+      - { label: Habitat, name: habitat, widget: text, required: false }
+      - { label: Description, name: body, widget: markdown }
+
+  - name: glossary
+    label: Glossary
+    files:
+      - file: content/glossary.md
+        label: Glossary
+        name: glossary
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Standfirst, name: standfirst, widget: text, required: false }
+          - label: Terms
+            name: terms
+            widget: list
+            fields:
+              - { label: Term, name: title, widget: string }
+              - { label: Definition, name: body, widget: text }
+
+  - name: authors_singleton
+    label: The Authors
+    files:
+      - file: content/authors.md
+        label: The Authors
+        name: authors_page
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Authors
+            name: authors
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Bio, name: bio, widget: text }

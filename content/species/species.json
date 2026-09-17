@@ -1,4 +1,5 @@
 {
   "layout": "species.njk",
-  "permalink": "/{{ page.fileSlug }}/"
+  "permalink": "/{{ page.fileSlug }}/",
+  "tags": "species"
 }

@@ -1,0 +1,79 @@
+/* Seasonal palettes. Set data-season on any ancestor (usually <html> or a <section>).
+   June 1 – Aug 31 summer · Sep 1 – Nov 30 fall · Dec 1 – Feb 28/29 winter · Mar 1 – May 31 spring.
+   Sunstone is the one constant across all four. */
+[data-season="spring"]{
+  --color-primary-darker:hsl(178,93%,0%);--color-primary-darker-h:178;--color-primary-darker-s:93%;--color-primary-darker-l:0%;
+  --color-primary-dark:hsl(178,93%,6%);--color-primary-dark-h:178;--color-primary-dark-s:93%;--color-primary-dark-l:6%;
+  --color-primary:hsl(178,93%,12%);--color-primary-h:178;--color-primary-s:93%;--color-primary-l:12%;
+  --color-primary-light:hsl(178,100%,15%);--color-primary-light-h:178;--color-primary-light-s:100%;--color-primary-light-l:15%;
+  --color-primary-lighter:hsl(178,86%,20%);--color-primary-lighter-h:178;--color-primary-lighter-s:86%;--color-primary-lighter-l:20%;
+  --color-secondary:hsl(319,54%,79%);--color-secondary-h:319;--color-secondary-s:54%;--color-secondary-l:79%;
+  --color-secondary-light:hsl(319,54%,85%);--color-secondary-lighter:hsl(319,54%,91%);
+  --color-secondary-dark:hsl(319,54%,73%);--color-secondary-darker:hsl(319,54%,67%);
+  --color-tertiary:hsl(42,90%,76%);--color-tertiary-h:42;--color-tertiary-s:90%;--color-tertiary-l:76%;
+  --color-contrast-lower:hsl(90,6%,81%);--color-contrast-lower-h:90;--color-contrast-lower-s:6%;--color-contrast-lower-l:81%;
+  --color-contrast-low:hsl(157,7%,65%);--color-contrast-low-h:157;--color-contrast-low-s:7%;--color-contrast-low-l:65%;
+  --color-contrast-medium:hsl(167,9%,49%);--color-contrast-medium-h:167;--color-contrast-medium-s:9%;--color-contrast-medium-l:49%;
+  --color-contrast-high:hsl(175,27%,27%);--color-contrast-high-h:175;--color-contrast-high-s:27%;--color-contrast-high-l:27%;
+  --color-contrast-higher:hsl(178,93%,12%);--color-contrast-higher-h:178;--color-contrast-higher-s:93%;--color-contrast-higher-l:12%;
+}
+[data-season="summer"]{
+  --color-primary-darker:hsl(135,15%,5%);--color-primary-darker-h:135;--color-primary-darker-s:15%;--color-primary-darker-l:5%;
+  --color-primary-dark:hsl(128,12%,13%);--color-primary-dark-h:128;--color-primary-dark-s:12%;--color-primary-dark-l:13%;
+  --color-primary:hsl(138,17%,19%);--color-primary-h:138;--color-primary-s:17%;--color-primary-l:19%;
+  --color-primary-light:hsl(136,17%,25%);--color-primary-light-h:136;--color-primary-light-s:17%;--color-primary-light-l:25%;
+  --color-primary-lighter:hsl(131,13%,34%);--color-primary-lighter-h:131;--color-primary-lighter-s:13%;--color-primary-lighter-l:34%;
+  --color-secondary:hsl(74,47%,43%);--color-secondary-h:74;--color-secondary-s:47%;--color-secondary-l:43%;
+  --color-tertiary:hsl(138,17%,85%);--color-tertiary-h:138;--color-tertiary-s:17%;--color-tertiary-l:85%;
+  --color-contrast-lower:hsl(53,8%,80%);--color-contrast-lower-h:53;--color-contrast-lower-s:8%;--color-contrast-lower-l:80%;
+  --color-contrast-low:hsl(87,5%,65%);--color-contrast-low-h:87;--color-contrast-low-s:5%;--color-contrast-low-l:65%;
+  --color-contrast-medium:hsl(108,4%,51%);--color-contrast-medium-h:108;--color-contrast-medium-s:4%;--color-contrast-medium-l:51%;
+  --color-contrast-high:hsl(133,9%,31%);--color-contrast-high-h:133;--color-contrast-high-s:9%;--color-contrast-high-l:31%;
+  --color-contrast-higher:hsl(138,18%,19%);--color-contrast-higher-h:138;--color-contrast-higher-s:18%;--color-contrast-higher-l:19%;
+}
+[data-season="fall"]{
+  --color-primary-darker:hsl(0,82%,0%);--color-primary-darker-h:0;--color-primary-darker-s:82%;--color-primary-darker-l:0%;
+  --color-primary-dark:hsl(0,82%,5%);--color-primary-dark-h:0;--color-primary-dark-s:82%;--color-primary-dark-l:5%;
+  --color-primary:hsl(0,82%,9%);--color-primary-h:0;--color-primary-s:82%;--color-primary-l:9%;
+  --color-primary-light:hsl(0,78%,13%);--color-primary-light-h:0;--color-primary-light-s:78%;--color-primary-light-l:13%;
+  --color-primary-lighter:hsl(359,47%,27%);--color-primary-lighter-h:359;--color-primary-lighter-s:47%;--color-primary-lighter-l:27%;
+  --color-secondary:hsl(48,89%,50%);--color-secondary-h:48;--color-secondary-s:89%;--color-secondary-l:50%;
+  --color-tertiary:hsl(25,100%,84%);--color-tertiary-h:25;--color-tertiary-s:100%;--color-tertiary-l:84%;
+  --color-bg-dark:hsl(35,23%,88%);--color-bg-dark-h:35;--color-bg-dark-s:23%;--color-bg-dark-l:88%;
+  --color-contrast-lower:hsl(18,16%,79%);--color-contrast-lower-h:18;--color-contrast-lower-s:16%;--color-contrast-lower-l:79%;
+  --color-contrast-low:hsl(10,12%,62%);--color-contrast-low-h:10;--color-contrast-low-s:12%;--color-contrast-low-l:62%;
+  --color-contrast-medium:hsl(4,13%,45%);--color-contrast-medium-h:4;--color-contrast-medium-s:13%;--color-contrast-medium-l:45%;
+  --color-contrast-high:hsl(358,28%,23%);--color-contrast-high-h:358;--color-contrast-high-s:28%;--color-contrast-high-l:23%;
+  --color-contrast-higher:hsl(0,83%,9%);--color-contrast-higher-h:0;--color-contrast-higher-s:83%;--color-contrast-higher-l:9%;
+}
+[data-season="winter"]{
+  --color-primary-darker:hsl(257,46%,0%);--color-primary-darker-h:257;--color-primary-darker-s:46%;--color-primary-darker-l:0%;
+  --color-primary-dark:hsl(257,46%,8%);--color-primary-dark-h:257;--color-primary-dark-s:46%;--color-primary-dark-l:8%;
+  --color-primary:hsl(257,46%,16%);--color-primary-h:257;--color-primary-s:46%;--color-primary-l:16%;
+  --color-primary-light:hsl(257,41%,21%);--color-primary-light-h:257;--color-primary-light-s:41%;--color-primary-light-l:21%;
+  --color-primary-lighter:hsl(257,25%,35%);--color-primary-lighter-h:257;--color-primary-lighter-s:25%;--color-primary-lighter-l:35%;
+  --color-secondary:hsl(194,87%,82%);--color-secondary-h:194;--color-secondary-s:87%;--color-secondary-l:82%;
+  --color-tertiary:hsl(232,70%,89%);--color-tertiary-h:232;--color-tertiary-s:70%;--color-tertiary-l:89%;
+  --color-bg-dark:hsl(15,13%,88%);--color-bg-dark-h:15;--color-bg-dark-s:13%;--color-bg-dark-l:88%;
+  --color-bg-darker:hsl(9,9%,85%);--color-bg-darker-h:9;--color-bg-darker-s:9%;--color-bg-darker-l:85%;
+  --color-bg-light:hsl(15,13%,98%);--color-bg-lighter:hsl(9,9%,100%);
+  --color-contrast-lower:hsl(343,7%,81%);--color-contrast-lower-h:343;--color-contrast-lower-s:7%;--color-contrast-lower-l:81%;
+  --color-contrast-low:hsl(286,7%,63%);--color-contrast-low-h:286;--color-contrast-low-s:7%;--color-contrast-low-l:63%;
+  --color-contrast-medium:hsl(271,9%,48%);--color-contrast-medium-h:271;--color-contrast-medium-s:9%;--color-contrast-medium-l:48%;
+  --color-contrast-high:hsl(264,23%,28%);--color-contrast-high-h:264;--color-contrast-high-s:23%;--color-contrast-high-l:28%;
+  --color-contrast-higher:hsl(257,46%,16%);--color-contrast-higher-h:257;--color-contrast-higher-s:46%;--color-contrast-higher-l:16%;
+}
+/* Inverse surface: dark block, Limestone type. Matches [data-theme=dark] on fwbg.org. */
+[data-theme="dark"]{
+  --color-bg:var(--color-primary);
+  --color-bg-light:var(--color-primary-light);
+  --color-bg-lighter:var(--color-primary-lighter);
+  --color-bg-dark:var(--color-primary-dark);
+  --color-bg-darker:var(--color-primary-darker);
+  --color-contrast-higher:hsl(33,31%,93%);--color-contrast-higher-h:33;--color-contrast-higher-s:31%;--color-contrast-higher-l:93%;
+  --color-contrast-high:hsl(60,7%,78%);--color-contrast-high-h:60;--color-contrast-high-s:7%;--color-contrast-high-l:78%;
+  --color-contrast-medium:hsl(102,5%,57%);--color-contrast-medium-h:102;--color-contrast-medium-s:5%;--color-contrast-medium-l:57%;
+  --color-contrast-low:hsl(120,5%,43%);--color-contrast-low-h:120;--color-contrast-low-s:5%;--color-contrast-low-l:43%;
+  --color-contrast-lower:hsl(133,9%,29%);--color-contrast-lower-h:133;--color-contrast-lower-s:9%;--color-contrast-lower-l:29%;
+  background-color:var(--color-bg);color:var(--color-contrast-high);
+}

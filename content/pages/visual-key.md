@@ -1,5 +1,8 @@
 ---
 title: Visual Key
+eyebrow: Identify
+standfirst: The link below opens the Visual Key to the Ferns and Lycophytes of Texas.
+cta_label: Open the Visual Key
+cta_url: "#"
 ---
-
-Placeholder for the Visual Key section. On the real site this links out to a standalone HTML5 app (`/visualkey_fot/`) — a fully static, self-contained tool (Microsoft PivotViewer + Deep Zoom tile images) with no database dependency, so it migrates as a simple asset-folder copy rather than needing a rebuild.
+This key was built with HTML5 and should work on most desktop and mobile browsers. If you have problems accessing it, contact us at [it@brit.org](mailto:it@brit.org).

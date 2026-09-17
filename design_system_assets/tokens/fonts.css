@@ -1,0 +1,13 @@
+/* New Kansas — served from FWBG's Adobe Fonts (Typekit) kit. Family name: "new-kansas".
+   Weights in the kit: 100 (Thin) and 500 (Medium). https://fonts.adobe.com/fonts/new-kansas */
+@import url("https://use.typekit.net/pgm0cqm.css");
+
+/* Satoshi — self-hosted, copied from the FWBG production theme. https://www.fontshare.com/fonts/satoshi */
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-MediumItalic.woff2") format("woff2");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:Satoshi;src:url("../fonts/Satoshi-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:Satoshi-Variable;src:url("../fonts/Satoshi-Variable.woff2") format("woff2");font-weight:300 900;font-style:normal;font-display:swap}

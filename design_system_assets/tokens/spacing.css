@@ -1,0 +1,22 @@
+/* Spacing. Non-linear scale from the production theme (space-unit = 1rem). */
+:root{
+  --space-unit:1rem;
+  --space-xxxxs:calc(0.1875 * var(--space-unit));
+  --space-xxxs:calc(0.375 * var(--space-unit));
+  --space-xxs:calc(0.5625 * var(--space-unit));
+  --space-xs:calc(0.75 * var(--space-unit));
+  --space-sm:calc(1.125 * var(--space-unit));
+  --space-md:calc(2 * var(--space-unit));
+  --space-lg:calc(3.125 * var(--space-unit));
+  --space-xl:calc(5.125 * var(--space-unit));
+  --space-xxl:calc(8.25 * var(--space-unit));
+  --space-xxxl:calc(13.25 * var(--space-unit));
+  --space-xxxxl:calc(21.5 * var(--space-unit));
+  --component-padding:var(--space-md);
+
+  --max-width-xxxxs:20rem;--max-width-xxxs:26rem;--max-width-xxs:32rem;--max-width-xs:38rem;
+  --max-width-sm:48rem;--max-width-md:64rem;--max-width-lg:80rem;--max-width-xl:90rem;
+  --max-width-xxl:100rem;--max-width-xxxl:120rem;
+
+  --mega-nav-height:85px;
+}

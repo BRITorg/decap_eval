@@ -1,7 +1,8 @@
 ---
 title: Anemia mexicana
 family: Anemiaceae
+author_citation: Klotzsch
 common_names: Mexican fern
+habitat: "[Placeholder — habitat notes from the book go here.]"
 ---
-
-Placeholder test entry for the Decap CMS migration-pipeline evaluation. This is not the real species description from *The Ferns and Lycophytes of Texas* — it stands in for one so we can test the create/edit/redirect workflow before touching real book content.
+[Placeholder — full description text from the book goes here: rhizome, leaf, blade, and spore characteristics.]

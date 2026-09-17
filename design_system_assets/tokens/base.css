@@ -1,0 +1,9 @@
+/* Minimal element defaults so a bare page picks up the brand without extra work. */
+body{margin:0;background-color:var(--color-bg);color:var(--color-contrast-high);font-family:var(--font-primary);font-size:var(--text-base-size);line-height:var(--body-line-height);font-weight:var(--body-font-weight);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{color:var(--color-contrast-higher);line-height:var(--heading-line-height);font-weight:var(--heading-font-weight);margin:0 0 var(--space-xs)}
+p{margin:0 0 var(--space-sm)}
+a{color:var(--link-color);text-decoration:underline;text-underline-offset:0.15em;transition:color var(--duration-fast) var(--ease-out)}
+a:hover{color:var(--link-color-hover)}
+strong{font-weight:700}
+em{font-style:italic}
+img{max-width:100%}

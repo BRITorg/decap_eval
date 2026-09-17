@@ -1,0 +1,14 @@
+{% import "macros.njk" as m %}
+<header style="background:var(--surface-card);box-shadow:inset 0 -1px 0 hsla(var(--color-contrast-higher-h),var(--color-contrast-higher-s),var(--color-contrast-higher-l),.1);">
+  <div style="max-width:var(--max-width-xxl);margin:0 auto;padding:var(--space-xs) var(--component-padding);display:flex;align-items:center;justify-content:space-between;gap:var(--space-sm);flex-wrap:wrap;">
+    <a href="{{ '/' | url }}" style="display:flex;align-items:center;flex:none;">
+      <img src="{{ '/assets/logo-primary.svg' | url }}" alt="FWBG" height="34">
+    </a>
+    <nav style="display:flex;align-items:center;gap:var(--space-xs) var(--space-sm);flex-wrap:wrap;">
+      {% for item in nav %}
+      <a href="{{ item.url | url }}" style="font-family:var(--font-primary);font-size:var(--text-sm);font-weight:{% if page.url == (item.url | url) %}700{% else %}500{% endif %};text-decoration:none;color:{% if page.url == (item.url | url) %}var(--color-contrast-higher){% else %}var(--color-contrast-high){% endif %};">{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+    {{ m.button("Buy the Book", "/buy-the-book/", "accent", "sm") }}
+  </div>
+</header>

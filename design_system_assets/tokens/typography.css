@@ -1,0 +1,32 @@
+/* Type. New Kansas = display only, used sparingly (once per printed side / digital block).
+   Satoshi = everything else. Modular scale ratio 1.215 on an 18px base, as shipped on fwbg.org. */
+:root{
+  --font-primary:Satoshi,system-ui,Arial,sans-serif;      /* body, UI, eyebrows */
+  --font-secondary:"new-kansas",Georgia,serif;            /* display / headline only */
+  --font-display:var(--font-secondary);
+  --font-body:var(--font-primary);
+
+  --text-base-size:1.125rem;   /* 18px */
+  --text-scale-ratio:1.215;
+  --text-unit:var(--text-base-size);
+  --text-xs:calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm:calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md:calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg:calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl:calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl:calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl:calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl:calc(var(--text-xxxl) * var(--text-scale-ratio));
+  --text-xxxxxl:4.2rem;
+  --text-16:16px;
+
+  --heading-line-height:1.2;
+  --body-line-height:1.4;
+  --subheading-line-height:1;
+  --heading-font-weight:700;
+  --body-font-weight:400;
+  --display-font-weight:100;   /* New Kansas Thin is the default display weight */
+  --display-font-weight-emphasis:500; /* New Kansas Medium, for key words only */
+  --eyebrow-letter-spacing:0.08em;
+  --letter-spacing-body:0;
+}
