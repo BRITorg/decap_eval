@@ -78,6 +78,8 @@ Plan is two-phase: a dev subdomain first, then cut over the real `ferns.brit.org
 
 **Naming:** DNS labels can't contain underscores — `ferns_new.brit.org` isn't valid. Use a hyphen, e.g. `ferns-new.brit.org` or `ferns-dev.brit.org`.
 
+**Phase 0 — Cloudflare account ownership (do this first):** Cloudflare has been evaluated so far under an individual's personal work account. Before any real Cloudflare configuration happens, move this to an account IT directly manages — this domain will front production `ferns.brit.org` traffic, so it shouldn't be tied to one person's login (continuity risk if that person is unavailable or leaves). Get IT to provision the account and grant the access needed to configure it, then do all of Phase 1 under that account rather than a personal one.
+
 **Phase 1 — dev subdomain:**
 1. GitHub side: repo Settings → Pages → add the custom domain (e.g. `ferns-dev.brit.org`). GitHub requires a one-time domain-ownership verification via a TXT record, separate from the CNAME (may already be satisfied at the BRITorg org level if other org repos already use `*.brit.org` custom domains on Pages).
 2. DNS side: add a CNAME record for the chosen dev subdomain → `britorg.github.io`.
