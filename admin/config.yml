@@ -2,9 +2,7 @@ backend:
   name: github
   repo: BRITorg/decap_eval
   branch: main
-  # base_url points at the Cloudflare Worker OAuth proxy (not deployed yet).
-  # Fill this in once the Worker is live, e.g. https://dcap-eval-oauth.<subdomain>.workers.dev
-  base_url: https://REPLACE-WITH-OAUTH-WORKER-URL
+  base_url: https://decap-eval-oauth.jbest.workers.dev
 
 media_folder: content/images
 public_folder: /content/images
